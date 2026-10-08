@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Logistics Academy</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= HEADER ================= -->
+
+    <header class="header">
+
+        <div class="logo">
+            📦 Logistics Academy
+        </div>
+
+        <nav>
+            <button class="nav-btn active" data-page="home">
+                Trang chủ
+            </button>
+
+            <button class="nav-btn" data-page="lessons">
+                Bài học
+            </button>
+
+            <button class="nav-btn" data-page="quiz">
+                Quiz
+            </button>
+
+            <button class="nav-btn" data-page="progress">
+                Tiến độ
+            </button>
+        </nav>
+
+    </header>
+
+
+    <!-- ================= MAIN ================= -->
+
+    <main class="container">
+
+
+        <!-- ========== HOME ========== -->
+
+        <section id="home" class="page active">
+
+            <div class="hero">
+
+                <div>
+
+                    <p class="small-title">
+                        LOGISTICS ACADEMY
+                    </p>
+
+                    <h1>
+                        Học Logistics<br>
+                        theo cách thực tế
+                    </h1>
+
+                    <p>
+                        Học từ những kiến thức bạn thực sự cần
+                        trong công việc kho, logistics và xuất nhập khẩu.
+                    </p>
+
+                    <button id="startLearning" class="primary-btn">
+                        🚀 Bắt đầu học
+                    </button>
+
+                </div>
+
+                <div class="hero-icon">
+                    📦
+                </div>
+
+            </div>
+
+
+            <h2 class="section-title">
+                Lộ trình học
+            </h2>
+
+
+            <div class="course-grid">
+
+                <div class="course-card">
+
+                    <div class="course-icon">
+                        📦
+                    </div>
+
+                    <h3>
+                        Logistics cơ bản
+                    </h3>
+
+                    <p>
+                        PO, Invoice, Packing List,
+                        Lot, Stock, Delivery...
+                    </p>
+
+                </div>
+
+
+                <div class="course-card">
+
+                    <div class="course-icon">
+                        🚢
+                    </div>
+
+                    <h3>
+                        Xuất nhập khẩu
+                    </h3>
+
+                    <p>
+                        ETD, ETA, FOB, CIF,
+                        FCL, LCL, C/O...
+                    </p>
+
+                </div>
+
+
+                <div class="course-card">
+
+                    <div class="course-icon">
+                        📄
+                    </div>
+
+                    <h3>
+                        Chứng từ
+                    </h3>
+
+                    <p>
+                        Invoice, Packing List,
+                        COA, MSDS, TDS...
+                    </p>
+
+                </div>
+
+
+                <div class="course-card">
+
+                    <div class="course-icon">
+                        🏭
+                    </div>
+
+                    <h3>
+                        Quản lý kho
+                    </h3>
+
+                    <p>
+                        Nhập kho, xuất kho,
+                        tồn kho, lot và hạn sử dụng.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========== LESSONS ========== -->
+
+        <section id="lessons" class="page">
+
+            <h1>
+                📚 Bài học Logistics
+            </h1>
+
+            <p class="subtitle">
+                Chọn một bài để bắt đầu học.
+            </p>
+
+
+            <div id="lessonList" class="lesson-list"></div>
+
+
+            <div id="lessonContent" class="lesson-content">
+
+                <h2>
+                    Chọn một bài học
+                </h2>
+
+                <p>
+                    Nội dung bài học sẽ xuất hiện ở đây.
+                </p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========== QUIZ ========== -->
+
+        <section id="quiz" class="page">
+
+            <div class="quiz-header">
+
+                <div>
+
+                    <p class="small-title">
+                        KIỂM TRA KIẾN THỨC
+                    </p>
+
+                    <h1>
+                        🧠 Logistics Quiz
+                    </h1>
+
+                </div>
+
+                <div class="score-box">
+                    Điểm:
+                    <strong id="quizScore">
+                        0
+                    </strong>
+                </div>
+
+            </div>
+
+
+            <div class="quiz-card">
+
+                <div id="questionNumber">
+                    Câu 1
+                </div>
+
+                <h2 id="question">
+                    Câu hỏi
+                </h2>
+
+                <div id="answers"></div>
+
+                <button
+                    id="nextQuestion"
+                    class="primary-btn"
+                    disabled
+                >
+                    Câu tiếp theo →
+                </button>
+
+                <p id="quizResult"></p>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- ========== PROGRESS ========== -->
+
+        <section id="progress" class="page">
+
+            <h1>
+                📊 Tiến độ học tập
+            </h1>
+
+            <p class="subtitle">
+                Theo dõi quá trình học Logistics của bạn.
+            </p>
+
+
+            <div class="progress-card">
+
+                <div class="progress-number">
+
+                    <span id="completedCount">
+                        0
+                    </span>
+
+                    <small>
+                        / 8 bài
+                    </small>
+
+                </div>
+
+
+                <div class="progress-bar">
+
+                    <div
+                        id="progressBar"
+                        class="progress-fill"
+                    ></div>
+
+                </div>
+
+
+                <p id="progressText">
+                    Bạn chưa hoàn thành bài học nào.
+                </p>
+
+            </div>
+
+
+            <div class="stats">
+
+                <div class="stat-card">
+
+                    <span>
+                        📚
+                    </span>
+
+                    <strong id="lessonStat">
+                        0
+                    </strong>
+
+                    <small>
+                        Bài đã học
+                    </small>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>
+                        🧠
+                    </span>
+
+                    <strong id="quizStat">
+                        0
+                    </strong>
+
+                    <small>
+                        Điểm Quiz
+                    </small>
+
+                </div>
+
+
+                <div class="stat-card">
+
+                    <span>
+                        ⭐
+                    </span>
+
+                    <strong id="levelStat">
+                        Người mới
+                    </strong>
+
+                    <small>
+                        Cấp độ
+                    </small>
+
+                </div>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- ================= FOOTER ================= -->
+
+    <footer>
+
+        <p>
+            📦 Logistics Academy
+        </p>
+
+        <p>
+            Học Logistics thực tế
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
